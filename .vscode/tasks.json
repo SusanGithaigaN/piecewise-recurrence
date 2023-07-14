@@ -24,5 +24,26 @@
                 "panel": "shared"
             }
         },
+        {
+            "label": "Build and run recursive",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "${workspaceFolder}/piecewise-recurrence-relation/recursive_function.c",
+                "-o",
+                "${workspaceFolder}/piecewise-recurrence-relation/recursive_function"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
     ]
 }

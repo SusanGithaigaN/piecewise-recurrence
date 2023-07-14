@@ -12,7 +12,8 @@ To test the program in (VS Code), you'll need to set up a few things. Here's a s
 2. To execute the programs, open a new terminal on VSCode and navigate to the fodler containing the programs. Run the following commands to test each of the files:
 
 ```
-1. Loop.c - ./loop
+1. loop.c - ./loop
+2. recursive_function.c - ./2. recursive_function
 ```
 
 Let's start with the explanations of each method, along with the advantages and disadvantages of each method.
@@ -32,3 +33,16 @@ This approach uses less memory because it does not create stack frames.
 **Disadvantages**
 - Recurrence relations can be difficult to understand at first because they use a recursive definition, which means that the definition of a term depends on the definition of previous terms.
 - Doesn't take advantage of memoization. Memoization is a technique that can be used to speed up the calculation of a recurrence relation by storing the values of already computed terms in a table.
+
+
+
+**Method 2: Recursive Function**
+
+**Advantages**
+- Simple implementation.
+- Easy to understand
+
+**Disadvantages**
+- This method is inefficient.
+- Memory usage.
+It creates many function calls on the call stack which can lead to Stack Overflow errors if recursion depth exceeds
