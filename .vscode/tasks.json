@@ -1,0 +1,28 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and run loop",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "${workspaceFolder}/piecewise-recurrence-relation/loop.c",
+                "-o",
+                "${workspaceFolder}/piecewise-recurrence-relation/loop"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+    ]
+}

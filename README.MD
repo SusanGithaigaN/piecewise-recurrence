@@ -9,7 +9,11 @@ Fork and clone this github repository.
 To test the program in (VS Code), you'll need to set up a few things. Here's a step-by-step guide:
 
 1. Install the C/C++ VSCode extension by Microsoft.
-2. To execute the programs, open a new terminal on VSCode and navigate to the foler containing the programs.
+2. To execute the programs, open a new terminal on VSCode and navigate to the fodler containing the programs. Run the following commands to test each of the files:
+
+```
+1. Loop.c - ./loop
+```
 
 Let's start with the explanations of each method, along with the advantages and disadvantages of each method.
 
