@@ -14,6 +14,7 @@ To test the program in (VS Code), you'll need to set up a few things. Here's a s
 ```
 1. loop.c - ./loop
 2. recursive_function.c - ./2. recursive_function
+3. memoization.c - ./memoization
 ```
 
 Let's start with the explanations of each method, along with the advantages and disadvantages of each method.
@@ -46,3 +47,21 @@ This approach uses less memory because it does not create stack frames.
 - This method is inefficient.
 - Memory usage.
 It creates many function calls on the call stack which can lead to Stack Overflow errors if recursion depth exceeds
+
+
+
+**Method 3: Memoization with Dynamic Programming**
+Memoization refers to storing previously computed values so that they can be retrieved instead of recomputing
+them again.  
+
+**Advantages**
+- Helps prevent stack overflow errors.
+Stack overflow errors can occur when a recursive function calls itself too many times. Memoization can help to prevent stack overflow errors by storing the values of previously computed subproblems in the memo table. This means that the recursive function does not have to call itself as many times, which can prevent stack overflow errors.
+- Efficient.
+Memoization avoids redundant computations by storing previously computed values in a table, called the memo table. This means that the same value does not have to be recalculated every time it is needed, which can save a lot of time
+- Faster execution.
+The time complexity of memoization with dynamic programming is linear, which means that the running time of the algorithm is proportional to the size of the input. This is similar to the iterative approach, but with the advantage of memoization.
+
+**Disadvantages**
+- Requires additional memory for the memo table This can be a concern when dealing with very large values of *n*, as the memo table can quickly become very large.
+- Slightly more complex due to the need for managing the memoization table.
