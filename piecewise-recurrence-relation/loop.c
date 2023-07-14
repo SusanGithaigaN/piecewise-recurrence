@@ -2,8 +2,9 @@
 #include <stdio.h>
 // use integer parameter n
 //  return nth term
-// loop to calculate term values 
-int Iterative_function (int n) { 
+// loop to calculate term values
+int loop(int n)
+{
     if (n == 0)
         return 0;
     else if (n == 1)
@@ -12,7 +13,8 @@ int Iterative_function (int n) {
         return 2;
 
     int f0 = 0, f1 = 1, f2 = 2, fn;
-    for (int i = 3; i <= n; i++) {
+    for (int i = 3; i <= n; i++)
+    {
         fn = f2 + f1;
         f0 = f1;
         f1 = f2;
@@ -24,10 +26,11 @@ int Iterative_function (int n) {
 // set variable n
 // call Iterative_function with n
 // return result
-int main() {
-    // set n, 
+int main()
+{
+    // set n,
     int n = 10;
-    int result = Iterative_function(n);
+    int result = loop(n);
     printf("F(%d) = %d\n", n, result);
     return 0;
 }
