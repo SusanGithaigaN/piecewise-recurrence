@@ -17,6 +17,8 @@ To test the program in (VS Code), you'll need to set up a few things. Here's a s
 
 Let's start with the explanations of each method, along with the advantages and disadvantages of each method.
 
+
+
 **Method 1: Iterative loop**
 
 **Advantages**
