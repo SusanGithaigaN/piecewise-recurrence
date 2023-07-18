@@ -8,8 +8,88 @@
 Fork and clone this github repository.
 To test the program in (VS Code), you'll need to set up a few things. Here's a step-by-step guide:
 
-1. Install the C/C++ VSCode extension by Microsoft.
-2. To execute the programs, open a new terminal on VSCode and navigate to the fodler containing the programs. Run the following commands to test each of the files:
+1. Install the C/C++ extension: Open VS Code and navigate to the Extensions view on the left sidebar (icon with four squares). Search for "C/C++" in the search bar and install the official C/C++ extension by Microsoft.
+
+2. Create a new folder and open it in VS Code: Create a new folder where you'll save your C program files. Open VS Code and use the "File" menu to open the folder you created.
+
+3. Create a new C file: In the Explorer view of VS Code (left sidebar), right-click on the folder you opened and select "New File." Give it a name with the **.c extension**, and press Enter to create the file.
+
+4. Configure tasks.json file: Press **Ctrl+Shift+P** (or **Cmd+Shift+P** *on macOS*) to open the Command Palette. Type "*Tasks: Configure Task*" and select "*Tasks: Configure Task*" from the dropdown. **Choose** "*Create tasks.json*" file from template" and select "*Others*" to create a custom task. Modify the generated tasks.json file as follows:
+```json
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and run loop",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "${workspaceFolder}/piecewise-recurrence-relation/loop.c",
+                "-o",
+                "${workspaceFolder}/piecewise-recurrence-relation/loop"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Build and run recursive",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "${workspaceFolder}/piecewise-recurrence-relation/recursive_function.c",
+                "-o",
+                "${workspaceFolder}/piecewise-recurrence-relation/recursive_function"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Build and run memoization",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "${workspaceFolder}/piecewise-recurrence-relation/memoization.c",
+                "-o",
+                "${workspaceFolder}/piecewise-recurrence-relation/memoization"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
+    ]
+}
+```
+5. Build and run the program: Press **Ctrl+Shift+B** (or **Cmd+Shift+B** *on macOS*) to trigger the build task you just configured. VS Code will compile your C program and generate an executable file
+
+6. To execute the programs, open a new terminal on VSCode and navigate to the fodler containing the programs. Run the following commands to test each of the files:
 
 ```
 1. loop.c - ./loop
